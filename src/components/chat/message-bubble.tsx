@@ -15,11 +15,16 @@ export function MessageBubble({ message }: MessageBubbleProps) {
     const isUser = message.role === 'user';
     const [copied, setCopied] = useState(false);
 
-    const handleCopy = () => {
-        navigator.clipboard.writeText(message.content);
-        setCopied(true);
-        toast.success("Message copied to clipboard");
-        setTimeout(() => setCopied(false), 2000);
+    const handleCopy = async () => {
+        try {
+            await navigator.clipboard.writeText(message.content);
+            setCopied(true);
+            toast.success("Message copied to clipboard");
+            setTimeout(() => setCopied(false), 2000);
+        } catch (err) {
+            toast.error("Failed to copy message");
+            console.error("Copy failed", err);
+        }
     };
 
     return (
@@ -84,7 +89,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
                     </div>
 
                     {!isUser && (
-                        <div className="absolute -bottom-6 left-0 opacity-0 group-hover:opacity-100 transition-opacity flex gap-1">
+                        <div className="absolute -bottom-6 left-0 opacity-0 group-hover:opacity-100 transition-opacity flex gap-1 z-10">
                             <Button
                                 variant="ghost"
                                 size="icon"

@@ -1,3 +1,59 @@
+# 개발
+## 개발 환경
+1. MacBook에서 Antigravity로 개발
+2. 개발은 Phase 1: Foundation까지 완료함.
+3. 이 코드는 바이브 코딩으로 만들었고, 중간에 직접 수정한 부분은 하나도 없음
+4. Agent는 Gemini 3 Pro로 개발
+5. 작업 스크립트는 OpenAI의 ChatGPT로 작성함 - Solar Pro 2로 작성해도 비슷하나 테스트용 토큰이 부족함
+6. Vercel로 배포함
+
+## 참조 링크(Upstage)
+https://console.upstage.ai/api/chat
+https://console.upstage.ai/docs/capabilities/digitize/document-parsing
+https://console.upstage.ai/api/document-digitization/document-parsing
+https://console.upstage.ai/docs/getting-started
+
+## Original README
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
 # AI Marketing Automation Service (Generative AI Chatbot)
 
 This project is a Next.js-based web application designed to automate marketing tasks using Generative AI (Upstage Solar LLM). It mimics the interface of ChatGPT and provides a seamless chat experience for marketers and content creators.
@@ -24,7 +80,6 @@ This project is a Next.js-based web application designed to automate marketing t
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd ch24
    ```
 
 2. **Install dependencies**
@@ -100,69 +155,3 @@ To evolve this prototype into a full-fledged Marketing Automation SaaS, we propo
 
 ---
 
-## Original README
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-
-# 역할
-당신은 생성형 인공지능 기반으로 웹 서비스를 제공하는 기획자 입니다.
-
-# 지시사항
-next.js를 사용해서 OPENAI upstage API를 사용해서 CHatGPT와 유사한 채팅 웹 앱을 개발하려고 합니다.
-
-# 웹 페이지 기획 내용
-웹 사이트의 UI 구성은 Shadcn 기술과 Tailwind CSS를 사용하여 구현합니다.
-화면 구성은 ChatGPT 웹서비스와 동일하게 구성하려고 하비낟.
-
-# 상세 지침 
-첨부한 ChatGPT 서비스 화면솨 유사한 인공지능 챗봇 서비스를 개발하기 위하 되도록 상세한 기능 명세서를 작성해 주세요
-Mark Down 형식으로 정의해 주세요.
-
-
-# 개발환경 정보
-당신은 현재 Mac 환경의 Gemini AI 앱에서 개발을 진행하고 있습니다.
-# 지시 사항
-지금까지 구현한 내용을 당신이 파악하기 위해서 코드베이스 내용을 읽어서 구현 내용을 파악해
-# 상세지침
-파일의 요구사항 명세서를 참고해서 생성형 인공지능 마케팅 자동화 웹서비스를 개발하기 위한 구현 단계를 구분해서 제시해주세요.
-### 참조 링크
-https://console.upstage.ai/api/chat
-https://console.upstage.ai/docs/capabilities/digitize/document-parsing
-https://console.upstage.ai/api/document-digitization/document-parsing
-https://console.upstage.ai/docs/getting-started

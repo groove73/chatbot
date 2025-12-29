@@ -42,10 +42,13 @@ export function MessageBubble({ message }: MessageBubbleProps) {
                 <div className={cn(
                     "rounded-2xl px-5 py-3 text-sm relative shadow-sm",
                     isUser
-                        ? "bg-primary text-primary-foreground rounded-tr-none"
+                        ? "bg-primary text-primary-foreground rounded-tr-none [&_*]:text-primary-foreground"
                         : "bg-secondary/50 text-secondary-foreground rounded-tl-none border"
                 )}>
-                    <div className="prose prose-sm dark:prose-invert break-words max-w-none">
+                    <div className={cn(
+                        "prose prose-sm break-words max-w-none",
+                        isUser ? "" : "dark:prose-invert"
+                    )}>
                         <ReactMarkdown
                             components={{
                                 p: ({ children }) => <p className="mb-2 last:mb-0 leading-relaxed">{children}</p>,

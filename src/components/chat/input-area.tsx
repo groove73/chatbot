@@ -42,7 +42,7 @@ export function InputArea({ onSend, isLoading }: InputAreaProps) {
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
                     placeholder="Send a message..."
-                    className="min-h-[50px] resize-none pr-12 py-3"
+                    className="min-h-[50px] resize-none pr-12 py-3 bg-background text-foreground border-input focus:ring-0 shadow-sm"
                     rows={1}
                     disabled={isLoading}
                 />

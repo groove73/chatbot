@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Message } from '@/types/chat';
 
 export function ChatInterface() {
-    const { messages, isLoading, addMessage, setLoading, currentChatId, updateMessageContent, createChat } = useChatStore();
+    const { messages, isLoading, addMessage, setLoading, currentChatId, updateMessageContent, createChat, selectedModel, setModel } = useChatStore();
     const scrollRef = useRef<HTMLDivElement>(null);
     const viewportRef = useRef<HTMLDivElement>(null);
 
@@ -52,7 +52,7 @@ export function ChatInterface() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     messages: [...messages, userMessage].map(m => ({ role: m.role, content: m.content })),
-                    model: 'solar-1-mini-chat'
+                    model: selectedModel
                 })
             });
 
@@ -81,6 +81,18 @@ export function ChatInterface() {
 
     return (
         <div className="flex flex-col h-full w-full">
+            <div className="flex items-center justify-between px-4 py-2 border-b bg-background/50 backdrop-blur top-0 z-10">
+                <div className="text-sm font-medium">Model</div>
+                <select
+                    className="text-sm border rounded px-2 py-1 bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    value={selectedModel}
+                    onChange={(e) => setModel(e.target.value)}
+                    disabled={isLoading}
+                >
+                    <option value="solar-1-mini-chat">Upstage Solar</option>
+                    <option value="gemini-3-flash-preview">Google Gemini 3.0 Flash</option>
+                </select>
+            </div>
             <div className="flex-1 overflow-hidden relative">
                 <ScrollArea className="h-full w-full" ref={scrollRef}>
                     <div className="flex flex-col gap-4 p-4 max-w-3xl mx-auto h-full min-h-[calc(100vh-140px)]" ref={viewportRef}>

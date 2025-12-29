@@ -13,6 +13,7 @@ export const useChatStore = create<ChatState>((set, get) => ({
     currentChatId: null,
     messages: [],
     isLoading: false,
+    selectedModel: 'gemini-3-flash-preview',
 
     chatMessages: {},
 
@@ -103,4 +104,6 @@ export const useChatStore = create<ChatState>((set, get) => ({
             }
         };
     }),
+
+    setModel: (model) => set({ selectedModel: model }),
 }));

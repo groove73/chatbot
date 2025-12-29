@@ -13,6 +13,22 @@ https://console.upstage.ai/docs/capabilities/digitize/document-parsing
 https://console.upstage.ai/api/document-digitization/document-parsing
 https://console.upstage.ai/docs/getting-started
 
+# 추가 개발
+현재 개발된 상태를 기반으로 추가 개발을 진행함
+## 추가 기능 수정 수정
+지금 개발된 상태는 Solar로 API가 연결이 되어 있는 상태이고, 추가로 구글 제미니와 연결해서 채팅을 할 수 있는 기능을 제공하려해
+구글의 API 키는 AIzaSyCifB5P4jbFpUwLipZqK6lLNAIKhOYaTxQ 이다.
+1. UI에서 AI모델을 선택 할 수 있게 해줘.
+2. 구글의 제미니 모델은 gemini-3-flash-preview를 사용하게 해주고 추가 모델은 차후 개발할 예정이야.
+3. 채팅창에서 내가 입력한 글자가 잘 안보이니 그 부분도 개선해줘
+
+## 참조 링크
+https://ai.google.dev/gemini-api/docs?hl=ko
+https://ai.google.dev/gemini-api/docs/libraries?hl=ko
+https://ai.google.dev/gemini-api/docs/interactions?hl=ko&ua=chat
+
+
+
 ## Original README
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).

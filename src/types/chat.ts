@@ -18,6 +18,7 @@ export interface ChatState {
     messages: Message[];
     isLoading: boolean;
     chatMessages: Record<string, Message[]>;
+    selectedModel: string;
 
     // Actions
     addMessage: (message: Message) => void;
@@ -28,4 +29,5 @@ export interface ChatState {
     deleteChat: (chatId: string) => void;
     updateChatTitle: (chatId: string, title: string) => void;
     updateMessageContent: (messageId: string, content: string) => void;
+    setModel: (model: string) => void;
 }
